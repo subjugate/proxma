@@ -19,6 +19,9 @@
 		31AA5838184AA1FA0031E123 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AA5820184AA1FA0031E123 /* UIKit.framework */; };
 		31AA5840184AA1FA0031E123 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31AA583E184AA1FA0031E123 /* InfoPlist.strings */; };
 		31AA5842184AA1FA0031E123 /* estimoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AA5841184AA1FA0031E123 /* estimoteTests.m */; };
+		31AA584C184AA29E0031E123 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AA584B184AA29E0031E123 /* CoreBluetooth.framework */; };
+		31AA584E184AA2B20031E123 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AA584D184AA2B20031E123 /* CoreLocation.framework */; };
+		31AA5850184AA2EB0031E123 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AA584F184AA2EB0031E123 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		31AA583D184AA1FA0031E123 /* estimoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "estimoteTests-Info.plist"; sourceTree = "<group>"; };
 		31AA583F184AA1FA0031E123 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		31AA5841184AA1FA0031E123 /* estimoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = estimoteTests.m; sourceTree = "<group>"; };
+		31AA584B184AA29E0031E123 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		31AA584D184AA2B20031E123 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		31AA584F184AA2EB0031E123 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31AA5850184AA2EB0031E123 /* SystemConfiguration.framework in Frameworks */,
+				31AA584E184AA2B20031E123 /* CoreLocation.framework in Frameworks */,
+				31AA584C184AA29E0031E123 /* CoreBluetooth.framework in Frameworks */,
 				31AA581F184AA1FA0031E123 /* CoreGraphics.framework in Frameworks */,
 				31AA5821184AA1FA0031E123 /* UIKit.framework in Frameworks */,
 				31AA581D184AA1FA0031E123 /* Foundation.framework in Frameworks */,
@@ -96,6 +105,9 @@
 		31AA581B184AA1FA0031E123 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				31AA584F184AA2EB0031E123 /* SystemConfiguration.framework */,
+				31AA584D184AA2B20031E123 /* CoreLocation.framework */,
+				31AA584B184AA29E0031E123 /* CoreBluetooth.framework */,
 				31AA581C184AA1FA0031E123 /* Foundation.framework */,
 				31AA581E184AA1FA0031E123 /* CoreGraphics.framework */,
 				31AA5820184AA1FA0031E123 /* UIKit.framework */,
@@ -191,6 +203,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jon Lee";
 				TargetAttributes = {
+					31AA5818184AA1FA0031E123 = {
+						DevelopmentTeam = 9K387J522V;
+					};
 					31AA5833184AA1FA0031E123 = {
 						TestTargetID = 31AA5818184AA1FA0031E123;
 					};
@@ -361,10 +376,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "estimote/estimote-Prefix.pch";
 				INFOPLIST_FILE = "estimote/estimote-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -374,10 +392,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "estimote/estimote-Prefix.pch";
 				INFOPLIST_FILE = "estimote/estimote-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
