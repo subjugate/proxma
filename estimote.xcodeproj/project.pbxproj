@@ -22,6 +22,7 @@
 		31AA584C184AA29E0031E123 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AA584B184AA29E0031E123 /* CoreBluetooth.framework */; };
 		31AA584E184AA2B20031E123 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AA584D184AA2B20031E123 /* CoreLocation.framework */; };
 		31AA5850184AA2EB0031E123 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AA584F184AA2EB0031E123 /* SystemConfiguration.framework */; };
+		31AA5859184AA7580031E123 /* libEstimoteSDK7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AA5858184AA7580031E123 /* libEstimoteSDK7.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,12 @@
 		31AA584B184AA29E0031E123 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		31AA584D184AA2B20031E123 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		31AA584F184AA2EB0031E123 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		31AA5858184AA7580031E123 /* libEstimoteSDK7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK7.a; path = "../../Downloads/iOS-SDK-master/EstimoteSDK/libEstimoteSDK7.a"; sourceTree = "<group>"; };
+		31AA5863184AA80B0031E123 /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
+		31AA5864184AA80B0031E123 /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
+		31AA5865184AA80B0031E123 /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
+		31AA5866184AA80B0031E123 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
+		31AA5867184AA80B0031E123 /* libEstimoteSDK7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK7.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31AA5859184AA7580031E123 /* libEstimoteSDK7.a in Frameworks */,
 				31AA5850184AA2EB0031E123 /* SystemConfiguration.framework in Frameworks */,
 				31AA584E184AA2B20031E123 /* CoreLocation.framework in Frameworks */,
 				31AA584C184AA29E0031E123 /* CoreBluetooth.framework in Frameworks */,
@@ -86,6 +94,7 @@
 		31AA5810184AA1FA0031E123 = {
 			isa = PBXGroup;
 			children = (
+				31AA5861184AA80B0031E123 /* EstimoteSDK */,
 				31AA5822184AA1FA0031E123 /* estimote */,
 				31AA583B184AA1FA0031E123 /* estimoteTests */,
 				31AA581B184AA1FA0031E123 /* Frameworks */,
@@ -105,6 +114,7 @@
 		31AA581B184AA1FA0031E123 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				31AA5858184AA7580031E123 /* libEstimoteSDK7.a */,
 				31AA584F184AA2EB0031E123 /* SystemConfiguration.framework */,
 				31AA584D184AA2B20031E123 /* CoreLocation.framework */,
 				31AA584B184AA29E0031E123 /* CoreBluetooth.framework */,
@@ -154,6 +164,27 @@
 				31AA583E184AA1FA0031E123 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		31AA5861184AA80B0031E123 /* EstimoteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				31AA5862184AA80B0031E123 /* Headers */,
+				31AA5867184AA80B0031E123 /* libEstimoteSDK7.a */,
+			);
+			name = EstimoteSDK;
+			path = "../../Downloads/iOS-SDK-master/EstimoteSDK";
+			sourceTree = "<group>";
+		};
+		31AA5862184AA80B0031E123 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				31AA5863184AA80B0031E123 /* ESTBeacon.h */,
+				31AA5864184AA80B0031E123 /* ESTBeaconDefinitions.h */,
+				31AA5865184AA80B0031E123 /* ESTBeaconManager.h */,
+				31AA5866184AA80B0031E123 /* ESTBeaconRegion.h */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +412,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "estimote/estimote-Prefix.pch";
 				INFOPLIST_FILE = "estimote/estimote-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/jonlee/Downloads/iOS-SDK-master/EstimoteSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -397,6 +432,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "estimote/estimote-Prefix.pch";
 				INFOPLIST_FILE = "estimote/estimote-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/jonlee/Downloads/iOS-SDK-master/EstimoteSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
