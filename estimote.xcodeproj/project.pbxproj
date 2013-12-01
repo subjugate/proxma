@@ -416,9 +416,8 @@
 					"$(inherited)",
 					"/Users/jonlee/Downloads/iOS-SDK-master/EstimoteSDK",
 				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/../EstimoteSDK/Headers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5410E02D-AE79-4114-B422-9A1C9863609C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -437,9 +436,8 @@
 					"$(inherited)",
 					"/Users/jonlee/Downloads/iOS-SDK-master/EstimoteSDK",
 				);
-				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/../EstimoteSDK/Headers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5410E02D-AE79-4114-B422-9A1C9863609C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
