@@ -23,6 +23,7 @@
 		31AA584E184AA2B20031E123 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AA584D184AA2B20031E123 /* CoreLocation.framework */; };
 		31AA5850184AA2EB0031E123 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AA584F184AA2EB0031E123 /* SystemConfiguration.framework */; };
 		31AA5859184AA7580031E123 /* libEstimoteSDK7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AA5858184AA7580031E123 /* libEstimoteSDK7.a */; };
+		31AA586C184AC7E70031E123 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AA586B184AC7E70031E123 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		31AA5865184AA80B0031E123 /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
 		31AA5866184AA80B0031E123 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
 		31AA5867184AA80B0031E123 /* libEstimoteSDK7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK7.a; sourceTree = "<group>"; };
+		31AA586B184AC7E70031E123 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				31AA582C184AA1FA0031E123 /* AppDelegate.m */,
 				31AA582E184AA1FA0031E123 /* Images.xcassets */,
 				31AA5823184AA1FA0031E123 /* Supporting Files */,
+				31AA586B184AC7E70031E123 /* Main.storyboard */,
 			);
 			path = estimote;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31AA586C184AC7E70031E123 /* Main.storyboard in Resources */,
 				31AA5827184AA1FA0031E123 /* InfoPlist.strings in Resources */,
 				31AA582F184AA1FA0031E123 /* Images.xcassets in Resources */,
 			);
@@ -331,7 +335,7 @@
 		31AA5843184AA1FA0031E123 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -371,7 +375,7 @@
 		31AA5844184AA1FA0031E123 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
